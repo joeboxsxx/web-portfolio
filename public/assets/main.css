@@ -161,3 +161,38 @@ a:hover {
   font-size: 0.875rem;
 }
 /* ===== CARD COMMON END ===== */
+
+/* ===== CARD | SELF-INTRODUCTION BEGIN ===== */
+.card-basic-info-layout {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 500px) {
+  .card-basic-info-layout {
+    flex-direction: row-reverse;
+  }
+}
+.mydog-photo {
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 0 16px -4px rgba(0, 0, 0, 0.7);
+  max-width: 120px;
+  padding: 4px;
+  background-color: white;
+}
+@media screen and (max-width: 500px) {
+  .mydog-photo {
+    margin: 16px auto;
+  }
+}
+@media screen and (min-width: 500px) {
+  .mydog-photo {
+    margin: 0 16px;
+  }
+}
+.card-basic-info-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 4px;
+}
+/* ===== CARD | SELF-INTRODUCTION END ===== */
