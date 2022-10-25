@@ -7,6 +7,10 @@
     <meta name="robots" content="noindex" />
     <title>Kenta's Portfolio</title>
     <link rel="stylesheet" href="./assets/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <img
@@ -84,6 +88,98 @@
         </div>
       </div>
 
+      <div style="height: 20px"></div>
+
+      <div class="card-cover bg-white">
+        <h2 class="card-title-cover bg-2 text-light">
+          <div class="card-title">Hobby</div>
+          <div class="card-subtitle">趣味</div>
+          <div class="card-title-line"></div>
+        </h2>
+        <div class="card-contents">
+          旅行と写真を撮ることが趣味です．
+          スマートフォンで気軽に撮影したものです．
+          パノラマ撮影が気に入っています．
+        </div>
+        <div
+          class="swiper-area"
+          style="
+            --swiper-navigation-color: #fff;
+            --swiper-pagination-color: #fff;
+          "
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-title">長崎県 呼子 百と十</div>
+              <img
+                src="./assets/photos/yobuko.jpg"
+                alt="長崎県 呼子 百と十"
+                style="width: auto"
+              />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-title">福岡県 高宮 townz</div>
+              <img
+                src="./assets/photos/townz.JPG"
+                alt="福岡県 高宮 townz"
+                style="width: auto"
+              />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-title">京都府 伏見稲荷神社</div>
+              <img
+                src="./assets/photos/husimi.jpg"
+                alt="京都府 伏見稲荷神社"
+                style="width: auto"
+              />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-title">長崎県 長崎市 コロッケ</div>
+              <img
+                src="./assets/photos/korokke.jpg"
+                alt="長崎県 長崎市 コロッケ"
+                style="width: auto"
+              />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-title">福岡県 警固 Shirouzu Coffee</div>
+              <img
+                src="./assets/photos/sirouzu.jpg"
+                alt="福岡県 警固 Shirouzu Coffee"
+                style="width: auto"
+              />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-title">寝ているクレム</div>
+              <img
+                src="./assets/photos/cleme.JPG"
+                alt="mydog-photo"
+                style="width: auto"
+              />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-title">京都府 清水寺</div>
+              <img
+                src="./assets/photos/kiyomizu.jpg"
+                alt="京都府 清水寺"
+                style="width: auto"
+              />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-title">福岡県 大名 うめぼし食堂</div>
+              <img
+                src="./assets/photos/umeboshi.JPG"
+                alt="福岡県 大名 うめぼし食堂"
+                style="width: auto"
+              />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
       <div style="height: 40px"></div>
 
       <footer class="footer-cover bg-2 text-light">
@@ -91,5 +187,20 @@
         <div class="footer-contents">&copy; Kenta's web page.</div>
       </footer>
     </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper-area", {
+        direction: "horizontal",
+        spaceBetween: 30,
+        autoplay: { delay: 10 * 1000, disableOnInteraction: false },
+        loop: true,
+        pagination: { el: ".swiper-pagination" },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
