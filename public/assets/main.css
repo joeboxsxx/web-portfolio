@@ -225,3 +225,42 @@ a:hover {
   padding: 0 0.5em;
 }
 /* ===== CARD | HOBBY END ===== */
+
+/* ===== CARD | SKILL BEGIN ===== */
+.tile-grid-cover {
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  gap: 10px;
+}
+@media screen and (max-width: 699px) {
+  .tile-grid-cover {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 700px) {
+  .tile-grid-cover {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.card-tile {
+  border: 1px solid #cccccc;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+.card-tile-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+  color: #5d4037;
+  gap: 10px;
+  text-align: center;
+  justify-content: center;
+}
+.card-tile-text {
+  color: #5f574f;
+  text-align: justify;
+}
+/* ===== CARD | SKILL END ===== */
